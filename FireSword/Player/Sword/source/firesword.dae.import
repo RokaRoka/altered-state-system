@@ -10,13 +10,13 @@ source_file="res://Player/Sword/source/firesword.dae"
 source_md5="1404850bc10bad89c1cba1dd88867ba9"
 
 dest_files=[ "res://.import/firesword.dae-0a978b3434d6ccf23a7ac7ccd747b5a5.scn" ]
-dest_md5="ac3300e0a5d8f6206bfe8711585c0b00"
+dest_md5="327d2fda525344326f6326b745b955d1"
 
 [params]
 
 nodes/root_type="Spatial"
-nodes/root_name="Scene Root"
-nodes/root_scale=8.0
+nodes/root_name="SwordMesh"
+nodes/root_scale=12.0
 nodes/custom_script=""
 nodes/storage=0
 materials/location=1
