@@ -29,11 +29,51 @@ plane = Plane( 0, 1, 0, 0 )
 
 [node name="World" type="Spatial" index="0"]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
+[node name="UIControl" type="Control" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="HealthBar" type="ProgressBar" parent="UIControl" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 288.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 128, 16 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 100.0
+exp_edit = false
+rounded = false
+percent_visible = false
+_sections_unfolded = [ "Anchor", "Margin", "custom_colors" ]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
 
 environment = null
 
-[node name="MainCamera" type="Camera" parent="." index="1"]
+[node name="MainCamera" type="Camera" parent="." index="2"]
 
 transform = Transform( -1, 1.12108e-07, -1.01151e-07, 0, 0.669895, 0.742456, 1.50996e-07, 0.742456, -0.669895, 0, 7.01004, -3.78169 )
 keep_aspect = 1
@@ -50,7 +90,7 @@ near = 0.05
 far = 100.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="Player" type="KinematicBody" parent="." index="2"]
+[node name="Player" type="KinematicBody" parent="." index="3"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 input_ray_pickable = true
@@ -92,7 +132,7 @@ shape = SubResource( 2 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
-[node name="DirectionalLight" type="DirectionalLight" parent="." index="3"]
+[node name="DirectionalLight" type="DirectionalLight" parent="." index="4"]
 
 transform = Transform( 0.77989, 0.288563, -0.55543, 0.00371455, 0.885238, 0.465124, 0.625905, -0.364809, 0.689316, 0, 8, 0 )
 layers = 1
@@ -120,7 +160,7 @@ directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="StaticBody" type="StaticBody" parent="." index="4"]
+[node name="StaticBody" type="StaticBody" parent="." index="5"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
