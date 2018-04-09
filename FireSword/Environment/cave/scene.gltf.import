@@ -7,7 +7,7 @@ path="res://.import/scene.gltf-c7bf62da4bd4afca397840b9a8380d03.scn"
 [deps]
 
 source_file="res://Environment/cave/scene.gltf"
-source_md5="55123a04e328489f7d13d2226f805a3d"
+source_md5="aa2c736697b651a83b315d44bdf2bfd6"
 
 dest_files=[ "res://.import/scene.gltf-c7bf62da4bd4afca397840b9a8380d03.scn" ]
 dest_md5="93e042452f506b23ac01ad6e2150607e"

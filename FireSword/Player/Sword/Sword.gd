@@ -5,28 +5,33 @@ enum SwordState {
 	ATTACK
 }
 
-const SWORD_STATE_STRINGS = [
+const ANIM_STATES = [
 	"Idle",
 	"Swing"
 ]
 
 #state data
-var currentSwordState
+var currentAnimState
 
 #animations
 onready var animPlayer = get_node("AnimationPlayer")
 
 func _ready():
-	currentSwordState = IDLE
-	animPlayer.play( SWORD_STATE_STRINGS[currentSwordState] )
+	switchAnimState( IDLE )
 
-func _physics_process(delta):
-	#if Input.is_action_just_pressed( 
-	if Input.is_key_pressed( KEY_SPACE ):
-		switchState( ATTACK )
+func switchAnimState( newState ):
+	currentAnimState = ANIM_STATES[newState]
+	animPlayer.play( ANIM_STATES[newState] )
 
-func switchState( newState ):
-	currentSwordState = newState
-	animPlayer.play( SWORD_STATE_STRINGS[newState] )
+func tryAttack():
+	if currentAnimState == ANIM_STATES[ATTACK]:
+		return false
+	else:
+		switchAnimState( ATTACK )
+		return true
 
 
+func _on_AnimationPlayer_animation_finished(anim_name):
+	match anim_name:
+		"Swing":
+			switchAnimState( IDLE )
