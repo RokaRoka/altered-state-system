@@ -11,7 +11,7 @@ source_file="res://Player/Sword/Fire/fire-64x.png"
 source_md5="d0a6307770a65d49f2d9ef797f03b28c"
 
 dest_files=[ "res://.import/fire-64x.png-5b932d0b05771b1e8dd28a135b262569.s3tc.stex", "res://.import/fire-64x.png-5b932d0b05771b1e8dd28a135b262569.etc2.stex" ]
-dest_md5="354b9acce98d94007a7678a96b9ab0cf"
+dest_md5="43743609238c6e77365269fd6e715880"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=true
+flags/repeat=0
 flags/filter=true
 flags/mipmaps=true
 flags/anisotropic=false
