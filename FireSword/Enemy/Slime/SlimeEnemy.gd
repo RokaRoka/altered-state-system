@@ -1,16 +1,30 @@
-extends KinematicBody
+extends "res://System/Entity.gd"
 
-# MOVEMENT DATA #
-const SPEED = 50
+# PHYSICS CONSTANTS #
+const GRAVITY_VALUE = -30
 
+const KB_POWER = 10
+const KB_TIME = 0.25
+
+const SPEED = 40
 const MOVE_FREQ = 1.5 #seconds
 
 # GAMEPLAY VALUES #
-
+const MAX_HEALTH = 4
 
 func _ready():
 	pass
 
+func _physics_process( delta ):
+	#test for hit working
+	if Input.is_action_just_pressed( "player_attack" ):
+		hit( 1 )
+		
+	if inHitstun:
+		applyHitstun()
+	applyGravity( delta )
+	
+	velocity = move_and_slide( velocity, dir.up )
 
 func move():
 	print ("Im a moving enemy!!")

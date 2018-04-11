@@ -1,14 +1,14 @@
-extends KinematicBody
+extends "res://System/Entity.gd"
 
-#physics constants
-const GRAVITY = Vector3(0, -30, 0)
+# PHYSICS CONSTANTS #
+const KB_POWER = 20
+const KB_TIME = 0.2
 
 #editor members
 #player speed in pixels per second
 export var player_spd = 128
 
 #private members
-var buffered_velocity = Vector3()
 var input_direction = Vector3()
 
 var buffered_attack = 0
@@ -18,18 +18,28 @@ const ATTACK_BUFFER = 6 + 1 #1 is added since the frame you press the input, 1 g
 #current weapon is the child of "weapon" node
 onready var currentWeapon = get_node( "Weapon" ).get_child(0)
 
+#health realted
+const MAX_HEALTH = 10
+
 func _ready():
-	pass
+	health = MAX_HEALTH
 
 func _physics_process(delta):
 	input_direction = Vector3()
 	bufferMovement()
 	bufferAttack()
 	
-	playerMovement(delta)
 	if buffered_attack > 0:
 		playerAttack()
-	#applyGravity()
+	
+	playerMovement()	
+	if inHitstun:
+		applyHitstun()
+	applyGravity( delta )
+	
+	print("before vel " + String(velocity))
+	move_and_slide( velocity, dir.up )
+	#print("after vel " + String(velocity))
 
 # INPUT RELATED #
 
@@ -49,18 +59,12 @@ func bufferAttack():
 
 # FUNCTIONAL RELATED #
 
-func playerMovement(delta):
+func playerMovement():
 	if input_direction.length_squared() > 0:
-		move_and_slide( input_direction * player_spd * delta)
+		velocity += input_direction * player_spd
 
 func playerAttack():
 	if currentWeapon.tryAttack():
 		buffered_attack = 0
 	else:
 		buffered_attack -= 1
-
-func applyGravity():
-	var coll = move_and_collide( GRAVITY )
-	if coll != null:
-		#do ground collision stuff
-		pass
