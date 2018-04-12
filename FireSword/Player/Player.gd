@@ -4,9 +4,12 @@ extends "res://System/Entity.gd"
 const KB_POWER = 20
 const KB_TIME = 0.2
 
+const MAX_VELOCITY_AMOUNT = 32
+
 #editor members
 #player speed in pixels per second
-export var player_spd = 128
+export var player_spd = 10
+export var player_turn_spd = 5 #in degrees
 
 #private members
 var input_direction = Vector3()
@@ -26,6 +29,9 @@ func _ready():
 
 func _physics_process(delta):
 	input_direction = Vector3()
+	
+	velocity = Vector3( 0, 0, 0 )
+	
 	bufferMovement()
 	bufferAttack()
 	
@@ -35,10 +41,9 @@ func _physics_process(delta):
 	playerMovement()	
 	if inHitstun:
 		applyHitstun()
-	applyGravity( delta )
 	
-	print("before vel " + String(velocity))
-	move_and_slide( velocity, dir.up )
+	move_and_collide( velocity * delta )
+	
 	#print("after vel " + String(velocity))
 
 # INPUT RELATED #
@@ -62,6 +67,14 @@ func bufferAttack():
 func playerMovement():
 	if input_direction.length_squared() > 0:
 		velocity += input_direction * player_spd
+		playerRotateOnMove()
+
+func playerRotateOnMove():
+	var newVector = Vector3()
+	#print (String( atan2(input_direction.x, input_direction.z)/PI + 0.5) + " Radians")
+	newVector.y = atan2(input_direction.x, input_direction.z) #+ 0.5*PI
+	rotation = newVector
+	#print(String(angle))
 
 func playerAttack():
 	if currentWeapon.tryAttack():

@@ -16,13 +16,10 @@ func _ready():
 	pass
 
 func _physics_process( delta ):
-	#test for hit working
-	if Input.is_action_just_pressed( "player_attack" ):
-		hit( 1 )
-		
+	#test for hit working		
 	if inHitstun:
 		applyHitstun()
-	applyGravity( delta )
+	#applyGravity( delta )
 	
 	velocity = move_and_slide( velocity, dir.up )
 

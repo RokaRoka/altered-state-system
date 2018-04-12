@@ -10,13 +10,13 @@ source_file="res://Environment/sculptjanuary_2018__jan_18/scene.gltf"
 source_md5="4cafc5cd5a62bc89aaca52eacc32e1c3"
 
 dest_files=[ "res://.import/scene.gltf-0658fceffddc56e0d9b419d36b282669.scn" ]
-dest_md5="42745cb9f54e146f8672d43f4ef09dbc"
+dest_md5="e77641ba673da8833e206d990ff6b32c"
 
 [params]
 
 nodes/root_type="Spatial"
 nodes/root_name="Cave2SceneRoot"
-nodes/root_scale=0.25
+nodes/root_scale=0.1
 nodes/custom_script=""
 nodes/storage=0
 materials/location=1

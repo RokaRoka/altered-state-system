@@ -27,14 +27,14 @@ func applyGravity( delta ):
 	velocity.y += GRAVITY_VALUE * delta
 
 func applyHitstun(delta):
-	velocity += knockbackDir * KB_POWER
+	#velocity += knockbackDir * KB_POWER
 	hitstunTimer -= delta
 	if hitstunTimer < 0:
 		inHitstun = false
 
 func hit( dmgAmount, kbDir = dir.up ):
 	if not inHitstun:
-		knockbackDir = kbDir
+		#knockbackDir = kbDir
 		health -= dmgAmount
 		if health <= 0:
 			queue_free()

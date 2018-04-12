@@ -2,21 +2,21 @@
 
 [ext_resource path="res://Player/Sword/Sword.gd" type="Script" id=1]
 [ext_resource path="res://Player/Sword/source/firesword.dae" type="PackedScene" id=2]
-[ext_resource path="res://Player/Sword/Fire/FireSwordParticleMaterial.material" type="Material" id=3]
-[ext_resource path="res://Player/Sword/Fire/FireSword_FireBaseMaterial.tres" type="Material" id=4]
-[ext_resource path="res://Player/Sword/Sword_IdleAnim.anim" type="Animation" id=5]
-[ext_resource path="res://Player/Sword/Sword_SwingAnim.anim" type="Animation" id=6]
+[ext_resource path="res://Player/Sword/Sword_IdleAnim.anim" type="Animation" id=3]
+[ext_resource path="res://Player/Sword/Sword_SwingAnim.anim" type="Animation" id=4]
+[ext_resource path="res://Player/Sword/Fire/FireSwordParticleMaterial.material" type="Material" id=5]
+[ext_resource path="res://Player/Sword/Fire/FireSword_FireBaseMaterial.tres" type="Material" id=6]
 
-[sub_resource type="QuadMesh" id=1]
+[sub_resource type="BoxShape" id=3]
 
-material = ExtResource( 4 )
+extents = Vector3( 1, 1, 0.5 )
+
+[sub_resource type="QuadMesh" id=2]
+
+material = ExtResource( 6 )
 size = Vector2( 1, 1 )
 
-[sub_resource type="BoxShape" id=2]
-
-extents = Vector3( 0.5, 1, 0.5 )
-
-[node name="Sword" type="Spatial"]
+[node name="Sword" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -26,9 +26,76 @@ _sections_unfolded = [ "Transform" ]
 transform = Transform( -5.24537e-07, 0, 12, 0, 12, 0, -12, 0, -5.24537e-07, 0, 0, 0 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="FireParticles" type="Particles" parent="." index="1"]
+[node name="SwordHitbox" type="Area" parent="." index="1"]
 
-transform = Transform( 1, 0, 0, 0, -0.00133805, 0.999999, 0, -0.999999, -0.00133805, 0, 1.18052, -0.000394604 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.21874, 0 )
+input_ray_pickable = false
+input_capture_on_drag = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 0.0
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = false
+monitorable = false
+collision_layer = 9
+collision_mask = 16
+audio_bus_override = false
+audio_bus_name = "Master"
+reverb_bus_enable = false
+reverb_bus_name = "Master"
+reverb_bus_amount = 0.0
+reverb_bus_uniformity = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape" type="CollisionShape" parent="SwordHitbox" index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.112387, 0 )
+shape = SubResource( 3 )
+disabled = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Idle = ExtResource( 3 )
+anims/Swing = ExtResource( 4 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="Fire" type="OmniLight" parent="." index="3"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18052, 0 )
+visible = false
+layers = 1
+light_color = Color( 0.957031, 0.677878, 0.35141, 1 )
+light_energy = 1.25
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.75
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+omni_range = 6.0
+omni_attenuation = 0.5
+omni_shadow_mode = 1
+omni_shadow_detail = 1
+_sections_unfolded = [ "Light", "Omni", "Transform" ]
+
+[node name="FireParticles" type="Particles" parent="Fire" index="0"]
+
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
 layers = 1
 material_override = null
 cast_shadow = 0
@@ -51,53 +118,12 @@ fract_delta = true
 visibility_aabb = AABB( -1.33107, -1.29802, -2.74839, 2.66214, 2.54917, 5.52608 )
 local_coords = false
 draw_order = 0
-process_material = ExtResource( 3 )
+process_material = ExtResource( 5 )
 draw_passes = 1
-draw_pass_1 = SubResource( 1 )
+draw_pass_1 = SubResource( 2 )
 _sections_unfolded = [ "Draw Passes", "Geometry", "Process Material", "Time", "Transform" ]
 
-[node name="SwordHitbox" type="Area" parent="." index="2"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.21874, 0 )
-input_ray_pickable = false
-input_capture_on_drag = false
-space_override = 0
-gravity_point = false
-gravity_distance_scale = 0.0
-gravity_vec = Vector3( 0, -1, 0 )
-gravity = 0.0
-linear_damp = 0.1
-angular_damp = 1.0
-priority = 0.0
-monitoring = false
-monitorable = false
-collision_layer = 1
-collision_mask = 1
-audio_bus_override = false
-audio_bus_name = "Master"
-reverb_bus_enable = false
-reverb_bus_name = "Master"
-reverb_bus_amount = 0.0
-reverb_bus_uniformity = 0.0
-_sections_unfolded = [ "Collision" ]
-
-[node name="CollisionShape" type="CollisionShape" parent="SwordHitbox" index="0"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.112387, 0 )
-shape = SubResource( 2 )
-disabled = false
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/Idle = ExtResource( 5 )
-anims/Swing = ExtResource( 6 )
-blend_times = [  ]
-_sections_unfolded = [ "Playback Options" ]
+[connection signal="body_entered" from="SwordHitbox" to="." method="_on_SwordHitbox_body_entered"]
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 

@@ -12,13 +12,13 @@ is_hemisphere = false
 
 [sub_resource type="SphereShape" id=2]
 
-radius = 0.75
+radius = 0.9
 
-[node name="Enemy" type="KinematicBody" index="0"]
+[node name="Enemy" type="KinematicBody"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
-collision_layer = 1
+collision_layer = 19
 collision_mask = 1
 axis_lock_linear_x = false
 axis_lock_linear_y = false
@@ -28,6 +28,7 @@ axis_lock_angular_y = false
 axis_lock_angular_z = false
 collision/safe_margin = 0.001
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 
