@@ -33,6 +33,7 @@ func _physics_process(delta):
 	velocity = Vector3( 0, 0, 0 )
 	
 	bufferMovement()
+	bufferSwitch()
 	bufferAttack()
 	
 	if buffered_attack > 0:
@@ -57,6 +58,10 @@ func bufferMovement():
 		input_direction += ( dir.left * -1)
 	if Input.is_action_pressed( "player_down" ):
 		input_direction += ( dir.forward * -1)
+
+func bufferSwitch():
+	if Input.is_action_just_pressed( "player_switch" ):
+		currentWeapon.switchFire()
 
 func bufferAttack():
 	if Input.is_action_just_pressed( "player_attack" ):

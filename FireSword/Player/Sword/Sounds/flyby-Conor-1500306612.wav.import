@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/flyby-Conor-1500306612.wav-789534c411a1564ea447af9251bd16b7.sample"
+
+[deps]
+
+source_file="res://Player/Sword/Sounds/flyby-Conor-1500306612.wav"
+source_md5="640e044da6c978e70f0684dc4db890d5"
+
+dest_files=[ "res://.import/flyby-Conor-1500306612.wav-789534c411a1564ea447af9251bd16b7.sample" ]
+dest_md5="f5bf69e322c8148618b4753a3a0ccfd1"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

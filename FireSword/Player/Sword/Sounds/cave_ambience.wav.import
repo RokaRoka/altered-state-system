@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cave_ambience.wav-84497cc9745fc0101db2c36291d445d7.sample"
+
+[deps]
+
+source_file="res://Player/Sword/Sounds/cave_ambience.wav"
+source_md5="a7264afc43f0969e1c8c9ff33d30bc7d"
+
+dest_files=[ "res://.import/cave_ambience.wav-84497cc9745fc0101db2c36291d445d7.sample" ]
+dest_md5="30e2b53575fe2d37c135cb8f0a1f1904"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

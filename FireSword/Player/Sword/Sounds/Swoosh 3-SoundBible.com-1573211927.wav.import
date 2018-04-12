@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Swoosh 3-SoundBible.com-1573211927.wav-37818cec3dcf03ddca8c5b6f48d128be.sample"
+
+[deps]
+
+source_file="res://Player/Sword/Sounds/Swoosh 3-SoundBible.com-1573211927.wav"
+source_md5="4bcc1ffd8f3a2cc7023eb61d1804f93d"
+
+dest_files=[ "res://.import/Swoosh 3-SoundBible.com-1573211927.wav-37818cec3dcf03ddca8c5b6f48d128be.sample" ]
+dest_md5="e087d2df9c0734595a297bd6519c5f2e"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

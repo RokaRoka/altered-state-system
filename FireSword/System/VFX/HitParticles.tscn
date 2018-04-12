@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://System/VFX/HitParticlesMaterial.tres" type="Material" id=1]
+
+[sub_resource type="SphereMesh" id=1]
+
+radius = 0.25
+height = 0.5
+radial_segments = 8
+rings = 8
+is_hemisphere = false
+
+[node name="HitParticles" type="Particles"]
+
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+emitting = false
+amount = 15
+lifetime = 1.0
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.8
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_aabb = AABB( -3.07143, -2.39483, -2.52277, 6.14286, 4.78966, 5.04554 )
+local_coords = true
+draw_order = 0
+process_material = ExtResource( 1 )
+draw_passes = 1
+draw_pass_1 = SubResource( 1 )
+_sections_unfolded = [ "Draw Passes", "Process Material", "Time", "Transform" ]
+
+

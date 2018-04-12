@@ -13,12 +13,12 @@ const MOVE_FREQ = 1.5 #seconds
 const MAX_HEALTH = 4
 
 func _ready():
-	pass
+	health = MAX_HEALTH
 
 func _physics_process( delta ):
 	#test for hit working		
 	if inHitstun:
-		applyHitstun()
+		applyHitstun(delta)
 	#applyGravity( delta )
 	
 	velocity = move_and_slide( velocity, dir.up )
