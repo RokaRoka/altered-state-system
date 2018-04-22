@@ -2,25 +2,26 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mat.tree-laurel_metallicRoughness.png-02cc01404b0ee10ebe40d06418b50f60.stex"
+path.s3tc="res://.import/mat.tree-laurel_metallicRoughness.png-02cc01404b0ee10ebe40d06418b50f60.s3tc.stex"
+path.etc2="res://.import/mat.tree-laurel_metallicRoughness.png-02cc01404b0ee10ebe40d06418b50f60.etc2.stex"
 
 [deps]
 
 source_file="res://Environment/laurel_tree_-_low_poly/textures/mat.tree-laurel_metallicRoughness.png"
 source_md5="9f9c65a72c6c0751da39b4a4a54b29be"
 
-dest_files=[ "res://.import/mat.tree-laurel_metallicRoughness.png-02cc01404b0ee10ebe40d06418b50f60.stex" ]
-dest_md5="dd8ef84cddf9ff8514a464324c4719a2"
+dest_files=[ "res://.import/mat.tree-laurel_metallicRoughness.png-02cc01404b0ee10ebe40d06418b50f60.s3tc.stex", "res://.import/mat.tree-laurel_metallicRoughness.png-02cc01404b0ee10ebe40d06418b50f60.etc2.stex" ]
+dest_md5="7a6df0037bf1cd3f74ea0b673da3fc70"
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=true
 flags/filter=true
-flags/mipmaps=false
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
@@ -28,5 +29,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
