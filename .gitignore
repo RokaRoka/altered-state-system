@@ -3,3 +3,6 @@
 
 #GIMP .xcf project files
 *.xcf
+
+#Completed builds
+/Builds/

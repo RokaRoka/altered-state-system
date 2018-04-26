@@ -1,5 +1,8 @@
 extends "res://System/Entity.gd"
 
+#refs to nodes
+onready var uiControl = get_node("/root/World/UIControl")
+
 # PHYSICS CONSTANTS #
 const ACCEL = 3
 const DEACCEL = 8

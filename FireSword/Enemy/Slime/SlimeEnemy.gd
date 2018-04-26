@@ -1,5 +1,8 @@
 extends "res://System/Entity.gd"
 
+#refs to nodes
+onready var uiControl = get_node("/root/World/UIControl")
+
 # PHYSICS CONSTANTS #
 const GRAVITY_VALUE = -30
 
@@ -14,6 +17,7 @@ const MAX_HEALTH = 4
 
 func _ready():
 	health = MAX_HEALTH
+	expPoints = 1
 
 func _physics_process( delta ):
 	pass #velocity = move_and_slide( velocity, dir.up )
@@ -27,7 +31,9 @@ func move():
 	randDir = randDir.normalized() * SPEED
 	move_and_slide( randDir )
 
-
+func _exit_tree():
+	if health <= 0:
+		uiControl.addEXP(expPoints)
 
 func _on_MoveTimer_timeout():
 	move()
