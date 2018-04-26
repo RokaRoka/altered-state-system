@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Enemy/EnemySpawner.gd" type="Script" id=1]
+
+[node name="EnemySpawner" type="Position3D"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69949, 0.73326, -9.14629 )
+script = ExtResource( 1 )
+
+[node name="SpawnTimer" type="Timer" parent="." index="0"]
+
+process_mode = 1
+wait_time = 4.0
+one_shot = false
+autostart = true
+
+

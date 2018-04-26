@@ -82,7 +82,7 @@ light_specular = 0.75
 light_bake_mode = 1
 light_cull_mask = -1
 shadow_enabled = false
-shadow_color = Color( 0, 0, 0, 1 )
+shadow_color = Color( 0.167969, 0.167969, 0.167969, 1 )
 shadow_bias = 0.15
 shadow_contact = 0.0
 shadow_reverse_cull_face = false
@@ -91,7 +91,7 @@ omni_range = 6.0
 omni_attenuation = 0.5
 omni_shadow_mode = 1
 omni_shadow_detail = 1
-_sections_unfolded = [ "Light", "Omni", "Transform" ]
+_sections_unfolded = [ "Light", "Omni", "Shadow", "Transform" ]
 
 [node name="FireParticles" type="Particles" parent="Fire" index="0"]
 

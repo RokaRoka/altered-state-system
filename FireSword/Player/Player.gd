@@ -1,13 +1,11 @@
 extends "res://System/Entity.gd"
 
 # PHYSICS CONSTANTS #
-const KB_POWER = 20
-const KB_TIME = 0.2
-
-const MAX_VELOCITY_AMOUNT = 32
+const ACCEL = 3
+const DEACCEL = 8
 
 #editor members
-#player speed in pixels per second
+#player speed in meters per second
 export var player_spd = 10
 export var player_turn_spd = 5 #in degrees
 
@@ -30,8 +28,6 @@ func _ready():
 func _physics_process(delta):
 	input_direction = Vector3()
 	
-	velocity = Vector3( 0, 0, 0 )
-	
 	bufferMovement()
 	bufferSwitch()
 	bufferAttack()
@@ -39,13 +35,16 @@ func _physics_process(delta):
 	if buffered_attack > 0:
 		playerAttack()
 	
-	playerMovement()	
-	if inHitstun:
-		applyHitstun()
+	playerMovement( delta )		
+	applyGravity()
 	
-	move_and_collide( velocity * delta )
+	if Input.is_key_pressed( KEY_E ):
+		print("before vel " + String(velocity))
 	
-	#print("after vel " + String(velocity))
+	velocity = move_and_slide( velocity, dir.up )
+	
+	if Input.is_key_pressed( KEY_E ):
+		print("after vel " + String(velocity))
 
 # INPUT RELATED #
 
@@ -69,9 +68,22 @@ func bufferAttack():
 
 # FUNCTIONAL RELATED #
 
-func playerMovement():
+func playerMovement( delta ):	
+	var hvel = velocity
+	hvel.y = 0
+	
+	var target = input_direction.normalized() * player_spd
+	var accel
+	if (input_direction.dot(hvel) > 0):
+		accel = ACCEL
+	else:
+		accel = DEACCEL
+	
+	hvel = hvel.linear_interpolate(target, accel * delta)
+	
+	velocity.x = hvel.x
+	velocity.z = hvel.z
 	if input_direction.length_squared() > 0:
-		velocity += input_direction * player_spd
 		playerRotateOnMove()
 
 func playerRotateOnMove():

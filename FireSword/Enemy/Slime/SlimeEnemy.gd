@@ -16,19 +16,12 @@ func _ready():
 	health = MAX_HEALTH
 
 func _physics_process( delta ):
-	#test for hit working		
-	if inHitstun:
-		applyHitstun(delta)
-	#applyGravity( delta )
-	
-	velocity = move_and_slide( velocity, dir.up )
+	pass #velocity = move_and_slide( velocity, dir.up )
 
 func move():
-	print ("Im a moving enemy!!")
+	#print ("Im a moving enemy!!")
 	#random direction
 	var randDir = Vector3((randf() * 2.0) - 1.0, 0, (randf() * 2.0) - 1.0)
-	#change rotation to dir
-	#global_rotate( Vector3.AXIS_Y, )
 	
 	#move towards dir
 	randDir = randDir.normalized() * SPEED
