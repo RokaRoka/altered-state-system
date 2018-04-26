@@ -2,31 +2,32 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mat.tree-laurel_baseColor.jpeg-8f5d2a8b9d8f8e716d467a7ae188c418.stex"
+path.s3tc="res://.import/mat.tree-laurel_baseColor.jpeg-8f5d2a8b9d8f8e716d467a7ae188c418.s3tc.stex"
+path.etc2="res://.import/mat.tree-laurel_baseColor.jpeg-8f5d2a8b9d8f8e716d467a7ae188c418.etc2.stex"
 
 [deps]
 
 source_file="res://Environment/laurel_tree_-_low_poly/textures/mat.tree-laurel_baseColor.jpeg"
 source_md5="c6ee272f5fc8186a6d9328e9c54440f7"
 
-dest_files=[ "res://.import/mat.tree-laurel_baseColor.jpeg-8f5d2a8b9d8f8e716d467a7ae188c418.stex" ]
-dest_md5="799f6e3ea46993361a918e206e73b2f6"
+dest_files=[ "res://.import/mat.tree-laurel_baseColor.jpeg-8f5d2a8b9d8f8e716d467a7ae188c418.s3tc.stex", "res://.import/mat.tree-laurel_baseColor.jpeg-8f5d2a8b9d8f8e716d467a7ae188c418.etc2.stex" ]
+dest_md5="afb2d0f25fd4bdde6cadfb57c8dff900"
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=true
 flags/filter=true
-flags/mipmaps=false
+flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=2
+flags/srgb=1
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
