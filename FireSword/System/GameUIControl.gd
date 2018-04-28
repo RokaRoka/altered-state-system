@@ -3,6 +3,8 @@ extends Control
 onready var healthBar = get_node( "HealthBar" )
 onready var expBar = get_node( "EXPBar" )
 
+onready var player = get_node("/root/World/Player")
+
 onready var fireAbilityImage = get_node( "FireAbilityPanel/SpriteAnim" )
 
 enum Skills {
@@ -35,6 +37,7 @@ func activateFireUI():
 
 func addEXP( amount ):
 	if playerLevel < MAX_LEVEL:
+		player.experienceGain( amount )
 		expBar.value += amount
 		if expBar.ratio >= 1.0:
 			expBar.value -= expBar.max_value

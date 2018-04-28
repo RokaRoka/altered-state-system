@@ -7,7 +7,7 @@ path="res://.import/scene.gltf-b715708360ba2b12a4a6b2d20e545ba0.scn"
 [deps]
 
 source_file="res://Environment/laurel_tree_-_low_poly/scene.gltf"
-source_md5="d136e8af317fc21e3a23b5eed2e6d490"
+source_md5="050efaf6f13f9129458b7cb4bf177740"
 
 dest_files=[ "res://.import/scene.gltf-b715708360ba2b12a4a6b2d20e545ba0.scn" ]
 dest_md5="82c0ef3dcfac434095ef2130143d12d8"

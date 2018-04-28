@@ -2,6 +2,7 @@ extends "res://System/Entity.gd"
 
 #refs to nodes
 onready var uiControl = get_node("/root/World/UIControl")
+onready var expParticles = get_node("ExperienceParticles")
 
 # PHYSICS CONSTANTS #
 const ACCEL = 3
@@ -101,3 +102,8 @@ func playerAttack():
 		buffered_attack = 0
 	else:
 		buffered_attack -= 1
+
+func experienceGain( expAmount ):
+	expParticles.amount = expAmount * 15
+	expParticles.emitting = true
+	expParticles.restart()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/Sword/Sword.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player/Experience/ExpStarExplosion.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleMesh" id=1]
 
@@ -18,7 +19,7 @@ radius = 0.75
 height = 2.0
 _sections_unfolded = [ "Resource" ]
 
-[node name="Player" type="KinematicBody" index="0"]
+[node name="Player" type="KinematicBody"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 input_ray_pickable = true
@@ -63,9 +64,15 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Weapon" type="Spatial" parent="." index="2"]
 
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 0, 0 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Sword" parent="Weapon" index="0" instance=ExtResource( 2 )]
+
+[node name="ExperienceParticles" parent="." index="3" instance=ExtResource( 3 )]
+
+emitting = false
+visibility_aabb = AABB( -2.1796, -2.26977, -1.85068, 4.33284, 4.52978, 3.69354 )
 
 
