@@ -120,7 +120,7 @@ extents = Vector3( 2.18474, 2.34012, 0.561612 )
 material = ExtResource( 5 )
 size = Vector2( 1, 1 )
 
-[node name="World" type="Spatial" index="0"]
+[node name="World" type="Spatial"]
 
 _sections_unfolded = [ "Transform" ]
 
