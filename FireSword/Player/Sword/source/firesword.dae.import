@@ -7,7 +7,7 @@ path="res://.import/firesword.dae-0a978b3434d6ccf23a7ac7ccd747b5a5.scn"
 [deps]
 
 source_file="res://Player/Sword/source/firesword.dae"
-source_md5="76022731ff48c2b1267d511e05979a1d"
+source_md5="1404850bc10bad89c1cba1dd88867ba9"
 
 dest_files=[ "res://.import/firesword.dae-0a978b3434d6ccf23a7ac7ccd747b5a5.scn" ]
 dest_md5="327d2fda525344326f6326b745b955d1"
