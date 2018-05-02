@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tree_oak_dark.obj-dd1f7dc857cb06328abaf787565a09d2.mesh"
+
+[deps]
+
+files=[ "res://.import/tree_oak_dark.obj-dd1f7dc857cb06328abaf787565a09d2.mesh" ]
+
+source_file="res://Environment/kenney_natureKit/Models/OBJ format/tree_oak_dark.obj"
+source_md5="c35a2c5d0cfd1c10341480757d87886c"
+
+dest_files=[ "res://.import/tree_oak_dark.obj-dd1f7dc857cb06328abaf787565a09d2.mesh", "res://.import/tree_oak_dark.obj-dd1f7dc857cb06328abaf787565a09d2.mesh" ]
+dest_md5="909bc0ecedd0be694d9d703bf6014897"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

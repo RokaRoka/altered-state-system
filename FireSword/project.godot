@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="FireSword"
-run/main_scene="res://TestWorld.tscn"
+run/main_scene="res://MainScenes/TestWorld.tscn"
 config/icon="res://icon.png"
 
 [autoload]

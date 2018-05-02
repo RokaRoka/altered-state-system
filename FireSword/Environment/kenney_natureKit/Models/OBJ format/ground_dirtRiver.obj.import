@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/ground_dirtRiver.obj-93d1b81ab971c66834a6511e9a3cabdb.mesh"
+
+[deps]
+
+files=[ "res://.import/ground_dirtRiver.obj-93d1b81ab971c66834a6511e9a3cabdb.mesh" ]
+
+source_file="res://Environment/kenney_natureKit/Models/OBJ format/ground_dirtRiver.obj"
+source_md5="ddaf44e0c6a086041a594192cd82e8fd"
+
+dest_files=[ "res://.import/ground_dirtRiver.obj-93d1b81ab971c66834a6511e9a3cabdb.mesh", "res://.import/ground_dirtRiver.obj-93d1b81ab971c66834a6511e9a3cabdb.mesh" ]
+dest_md5="05e293a8133127c1c2be0625e284099b"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

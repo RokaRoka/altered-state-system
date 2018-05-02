@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tree_pine_tall.obj-2225b6cdd5fed4f11040130ba25043c4.mesh"
+
+[deps]
+
+files=[ "res://.import/tree_pine_tall.obj-2225b6cdd5fed4f11040130ba25043c4.mesh" ]
+
+source_file="res://Environment/kenney_natureKit/Models/OBJ format/tree_pine_tall.obj"
+source_md5="ddbd3c82195cc9d7e2ebf09f8c4f2029"
+
+dest_files=[ "res://.import/tree_pine_tall.obj-2225b6cdd5fed4f11040130ba25043c4.mesh", "res://.import/tree_pine_tall.obj-2225b6cdd5fed4f11040130ba25043c4.mesh" ]
+dest_md5="40951f4db20162bfdf79974f04ad519e"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

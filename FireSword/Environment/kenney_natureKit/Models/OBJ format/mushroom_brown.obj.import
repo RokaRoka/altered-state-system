@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/mushroom_brown.obj-7c1090bac3a5d3834dc3a7fe8b3c581d.mesh"
+
+[deps]
+
+files=[ "res://.import/mushroom_brown.obj-7c1090bac3a5d3834dc3a7fe8b3c581d.mesh" ]
+
+source_file="res://Environment/kenney_natureKit/Models/OBJ format/mushroom_brown.obj"
+source_md5="eb21a21a431341552737b50653fe1f94"
+
+dest_files=[ "res://.import/mushroom_brown.obj-7c1090bac3a5d3834dc3a7fe8b3c581d.mesh", "res://.import/mushroom_brown.obj-7c1090bac3a5d3834dc3a7fe8b3c581d.mesh" ]
+dest_md5="e2902d4d3a7aefa7f38ac745d38b2ed7"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

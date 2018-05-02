@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/stone_statue.obj-cff3e9b5f17d4b8ad912435f9ff7c621.mesh"
+
+[deps]
+
+files=[ "res://.import/stone_statue.obj-cff3e9b5f17d4b8ad912435f9ff7c621.mesh" ]
+
+source_file="res://Environment/kenney_natureKit/Models/OBJ format/stone_statue.obj"
+source_md5="255d7e907cbdd04477959718fc7f9d18"
+
+dest_files=[ "res://.import/stone_statue.obj-cff3e9b5f17d4b8ad912435f9ff7c621.mesh", "res://.import/stone_statue.obj-cff3e9b5f17d4b8ad912435f9ff7c621.mesh" ]
+dest_md5="4bc5cc9fab5fe3654aee39ac8099598b"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

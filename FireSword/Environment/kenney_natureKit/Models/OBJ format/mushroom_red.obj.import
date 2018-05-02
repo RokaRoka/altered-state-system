@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/mushroom_red.obj-ecce174ecaa7e6642008fd58ca7787e6.mesh"
+
+[deps]
+
+files=[ "res://.import/mushroom_red.obj-ecce174ecaa7e6642008fd58ca7787e6.mesh" ]
+
+source_file="res://Environment/kenney_natureKit/Models/OBJ format/mushroom_red.obj"
+source_md5="50702480359ad9866a0448c4161085e3"
+
+dest_files=[ "res://.import/mushroom_red.obj-ecce174ecaa7e6642008fd58ca7787e6.mesh", "res://.import/mushroom_red.obj-ecce174ecaa7e6642008fd58ca7787e6.mesh" ]
+dest_md5="0a75c00684e7e2ac3eb837610d66966e"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

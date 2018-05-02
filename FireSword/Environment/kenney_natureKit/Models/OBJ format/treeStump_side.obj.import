@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/treeStump_side.obj-6f01d87c4678450bb65d3593dbb39357.mesh"
+
+[deps]
+
+files=[ "res://.import/treeStump_side.obj-6f01d87c4678450bb65d3593dbb39357.mesh" ]
+
+source_file="res://Environment/kenney_natureKit/Models/OBJ format/treeStump_side.obj"
+source_md5="3b6b309b204ef24014f83f73483839e3"
+
+dest_files=[ "res://.import/treeStump_side.obj-6f01d87c4678450bb65d3593dbb39357.mesh", "res://.import/treeStump_side.obj-6f01d87c4678450bb65d3593dbb39357.mesh" ]
+dest_md5="f155df897b4e825cd4d169d3419b7736"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )

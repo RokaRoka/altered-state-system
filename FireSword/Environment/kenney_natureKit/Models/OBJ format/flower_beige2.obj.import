@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/flower_beige2.obj-e646937896035a84f39d1469543a95a8.mesh"
+
+[deps]
+
+files=[ "res://.import/flower_beige2.obj-e646937896035a84f39d1469543a95a8.mesh" ]
+
+source_file="res://Environment/kenney_natureKit/Models/OBJ format/flower_beige2.obj"
+source_md5="d8b61ea8ffed71faf4c56aae482bf64b"
+
+dest_files=[ "res://.import/flower_beige2.obj-e646937896035a84f39d1469543a95a8.mesh", "res://.import/flower_beige2.obj-e646937896035a84f39d1469543a95a8.mesh" ]
+dest_md5="ef7759096fcca11f739f7934e43965cb"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.5, 0.5, 0.5 )
