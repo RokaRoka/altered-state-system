@@ -100,3 +100,19 @@ func _on_SwordHitbox_body_entered(body):
 			body.hit(dmg)
 			print("dmg!")
 		createHitParticle(body)
+	elif body.get_name() == "Burnable_Tree2":
+		if fireActive:
+			body.fireHit(dmg)
+			print("burn!")
+		else:
+			body.hit(dmg)
+			print("dmg!")
+		createHitParticle(body)
+	elif body.get_name() == "Burnable_Tree3":
+			if fireActive:
+				body.fireHit(dmg)
+				print("burn!")
+			else:
+				body.hit(dmg)
+				print("dmg!")
+			createHitParticle(body)

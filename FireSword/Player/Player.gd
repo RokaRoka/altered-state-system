@@ -30,6 +30,9 @@ func _ready():
 	health = MAX_HEALTH
 
 func _physics_process(delta):
+	if Input.is_key_pressed( KEY_ESCAPE ):
+		get_tree().change_scene_to( PackedScenes.getScene("MainMenu") )
+	
 	input_direction = Vector3()
 	
 	bufferMovement()
@@ -63,7 +66,7 @@ func bufferMovement():
 		input_direction += ( dir.forward * -1)
 
 func bufferSwitch():
-	if Input.is_action_just_pressed( "player_switch" ):
+	if Input.is_action_just_pressed( "player_switch" ) and uiControl.playerLevel > 1:
 		currentWeapon.switchFire()
 
 func bufferAttack():

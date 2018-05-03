@@ -11,12 +11,13 @@ config_version=3
 [application]
 
 config/name="FireSword"
-run/main_scene="res://MainScenes/TestWorld.tscn"
+run/main_scene="res://MainScenes/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 dir="*res://System/directions.gd"
+PackedScenes="*res://MainScenes/PackedScenes.gd"
 
 [display]
 

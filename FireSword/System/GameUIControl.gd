@@ -1,10 +1,16 @@
 extends Control
 
+#export variables
+export (bool) var tutorialOn = true
+
+#refs
 onready var healthBar = get_node( "HealthBar" )
 onready var expBar = get_node( "EXPBar" )
+onready var level = get_node( "Level" )
 
 onready var player = get_node("/root/World/Player")
 
+onready var tutorialPanel = get_node( "TutorialPanel" )
 onready var fireAbilityImage = get_node( "FireAbilityPanel/SpriteAnim" )
 
 enum Skills {
@@ -27,6 +33,8 @@ func _init():
 	levelUpSkills[1] = SKILL_FIRE
 
 func _ready():
+	if tutorialOn:
+		tutorialPanel.show()
 	greyOutFireUI()
 
 func greyOutFireUI():
@@ -42,12 +50,20 @@ func addEXP( amount ):
 		if expBar.ratio >= 1.0:
 			expBar.value -= expBar.max_value
 			levelUp()
+	
+	if tutorialOn:
+		if tutorialPanel.currentIndex == 2 and expBar.value >= 3:
+			tutorialPanel.loadTutorial( 3 )
+		elif tutorialPanel.currentIndex == 3:
+			tutorialPanel.loadTutorial( 4 )
 
 func levelUp():
+	playerLevel += 1
+	level.text = "Level " + String(playerLevel)
 	newSkillGet()
 
 func newSkillGet():
 	var skill = levelUpSkills[playerLevel]
-	if playerSkills.has_key(skill):
+	if playerSkills.has(skill):
 		playerSkills[skill] = true
 	pass # replace with function body

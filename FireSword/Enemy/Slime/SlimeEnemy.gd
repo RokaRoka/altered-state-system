@@ -17,7 +17,7 @@ const MAX_HEALTH = 4
 
 func _ready():
 	health = MAX_HEALTH
-	expPoints = 1
+	expPoints = 2
 
 func _physics_process( delta ):
 	pass #velocity = move_and_slide( velocity, dir.up )

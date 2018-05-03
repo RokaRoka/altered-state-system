@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://System/BigArea.gd" type="Script" id=1]
 [ext_resource path="res://System/GameUIControl.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Player/Sword/Fire/FireSword_FireBaseMaterial.tres" type="Material" id=6]
 [ext_resource path="res://Enemy/EnemySpawner.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Enemy/Slime/SlimeEnemy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://System/SwitchBigArea.tscn" type="PackedScene" id=9]
 
 [sub_resource type="Environment" id=1]
 
@@ -94,29 +95,37 @@ extents = Vector3( 2.18501, 1, 7.28303 )
 
 [sub_resource type="BoxShape" id=3]
 
-extents = Vector3( 2.92485, 1.41084, 5.67346 )
+extents = Vector3( 3.7342, 1.41084, 5.67346 )
 
 [sub_resource type="BoxShape" id=4]
 
-extents = Vector3( 1.5558, 1.41084, 5.50848 )
+extents = Vector3( 1.19636, 1.41084, 5.50848 )
 
-[sub_resource type="BoxShape" id=5]
+[sub_resource type="BoxShape" id=12]
 
-extents = Vector3( 1.96605, 0.952954, 2.90878 )
+extents = Vector3( 4.17739, 1.41084, 4.36307 )
 
-[sub_resource type="BoxShape" id=6]
+[sub_resource type="BoxShape" id=13]
 
-extents = Vector3( 10.2442, 2.34012, 0.561612 )
+extents = Vector3( 2.26794, 0.952954, 2.90878 )
 
-[sub_resource type="BoxShape" id=7]
+[sub_resource type="BoxShape" id=14]
 
-extents = Vector3( 1.93094, 2.34012, 0.561612 )
+extents = Vector3( 12.5388, 2.34012, 0.561612 )
 
-[sub_resource type="BoxShape" id=8]
+[sub_resource type="BoxShape" id=15]
 
-extents = Vector3( 2.18474, 2.34012, 0.561612 )
+extents = Vector3( 2.26503, 2.34012, 0.561612 )
 
-[sub_resource type="QuadMesh" id=9]
+[sub_resource type="BoxShape" id=16]
+
+extents = Vector3( 2.18474, 2.63584, 0.561612 )
+
+[sub_resource type="BoxShape" id=10]
+
+extents = Vector3( 3.0258, 2.63584, 0.561612 )
+
+[sub_resource type="QuadMesh" id=11]
 
 material = ExtResource( 6 )
 size = Vector2( 1, 1 )
@@ -129,6 +138,8 @@ Name = "Cold Cavern"
 ExperiencePoints = 3
 
 [node name="UIControl" parent="." index="0" instance=ExtResource( 2 )]
+
+tutorialOn = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
 
@@ -153,7 +164,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Player" parent="." index="3" instance=ExtResource( 3 )]
 
-transform = Transform( 1, 0, -2.90958e-08, 0, 1, 0, 2.90958e-08, 0, 1, 4.37471, 2.41702, -2.29181 )
+transform = Transform( -0.72018, 0, -0.693787, 0, 1, 0, 0.693787, 0, -0.72018, 7.56341, 5.20185, 0.071838 )
 player_spd = 8
 
 [node name="CaveContainer" type="StaticBody" parent="." index="4"]
@@ -181,70 +192,91 @@ disabled = false
 
 [node name="CollisionShape2" type="CollisionShape" parent="CaveContainer" index="2"]
 
-transform = Transform( 0.720156, -0.0565304, 0.691505, 0.0782568, 0.996933, 0, -0.689385, 0.054115, 0.722371, 4.38062, -1.01932, -9.56623 )
+transform = Transform( 0.720156, -0.0565304, 0.691505, 0.0782568, 0.996933, 0, -0.689385, 0.054115, 0.722371, 4.94775, -0.957692, -10.1091 )
 shape = SubResource( 3 )
 disabled = false
 
 [node name="CollisionShape3" type="CollisionShape" parent="CaveContainer" index="3"]
 
-transform = Transform( 0.723241, 0.0273214, 0.690055, -0.0566236, 0.998199, 0.0198249, -0.688271, -0.0534116, 0.723485, -1.66164, -1.01069, -2.7852 )
+transform = Transform( 0.723241, 0.0273214, 0.690055, -0.0566236, 0.998199, 0.0198249, -0.688271, -0.0534116, 0.723485, -1.39481, -0.896686, -3.04283 )
 shape = SubResource( 4 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape4" type="CollisionShape" parent="CaveContainer" index="4"]
+[node name="CollisionShape13" type="CollisionShape" parent="CaveContainer" index="4"]
 
-transform = Transform( 0.0035525, 0.324289, 0.945952, -0.0111607, 0.945912, -0.324233, -0.999931, -0.00940563, 0.00697964, -7.61997, -0.0544552, -7.80211 )
-shape = SubResource( 5 )
+transform = Transform( 0.63789, -0.341936, 0.690055, 0.45561, 0.889959, 0.0198249, -0.6209, 0.30175, 0.723485, -5.43658, -2.78574, -1.06499 )
+shape = SubResource( 12 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape5" type="CollisionShape" parent="CaveContainer" index="5"]
+[node name="CollisionShape4" type="CollisionShape" parent="CaveContainer" index="5"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.56785, 2.26284, -10.5776 )
-shape = SubResource( 6 )
+transform = Transform( 0.0035525, 0.324289, 0.945952, -0.0111607, 0.945912, -0.324233, -0.999931, -0.00940563, 0.00697964, -7.62099, -0.0512615, -7.51597 )
+shape = SubResource( 13 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape6" type="CollisionShape" parent="CaveContainer" index="6"]
+[node name="CollisionShape5" type="CollisionShape" parent="CaveContainer" index="6"]
 
-transform = Transform( 0.387664, 0, -0.921801, 0, 1, 0, 0.921801, 0, 0.387664, 9.82453, 2.26284, -8.3907 )
-shape = SubResource( 7 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.56785, 2.26284, -11.4281 )
+shape = SubResource( 14 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape7" type="CollisionShape" parent="CaveContainer" index="7"]
+[node name="CollisionShape6" type="CollisionShape" parent="CaveContainer" index="7"]
+
+transform = Transform( 0.131755, 0, -0.991282, 0, 1, 0, 0.991282, 0, 0.131755, 10.6158, 2.26284, -8.72347 )
+shape = SubResource( 15 )
+disabled = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape7" type="CollisionShape" parent="CaveContainer" index="8"]
 
 transform = Transform( -0.645444, 0, -0.763808, 0, 1, 0, 0.763808, 0, -0.645444, 8.80137, 2.26284, -4.52285 )
-shape = SubResource( 8 )
+shape = SubResource( 16 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape8" type="CollisionShape" parent="CaveContainer" index="8"]
+[node name="CollisionShape8" type="CollisionShape" parent="CaveContainer" index="9"]
 
 transform = Transform( -0.989823, 0.0310469, -0.138877, 0, 0.975911, 0.218171, 0.142305, 0.21595, -0.965979, 1.20359, 2.78775, 1.17664 )
-shape = SubResource( 8 )
+shape = SubResource( 16 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape9" type="CollisionShape" parent="CaveContainer" index="9"]
+[node name="CollisionShape14" type="CollisionShape" parent="CaveContainer" index="10"]
+
+transform = Transform( -0.060199, -0.100567, 0.993108, -0.0447304, 0.994184, 0.0979645, -0.997184, -0.0385247, -0.0643473, -10.9547, 4.37084, -7.48438 )
+shape = SubResource( 10 )
+disabled = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape9" type="CollisionShape" parent="CaveContainer" index="11"]
 
 transform = Transform( -0.661128, 0.591617, -0.46141, 0, 0.61499, 0.788536, 0.750273, 0.521323, -0.406587, 6.73319, 1.45212, -0.175777 )
-shape = SubResource( 8 )
+shape = SubResource( 16 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape10" type="CollisionShape" parent="CaveContainer" index="10"]
+[node name="CollisionShape10" type="CollisionShape" parent="CaveContainer" index="12"]
 
 transform = Transform( 0.755341, -0.0587255, -0.652696, 0.0575591, 0.998073, -0.0231893, 0.6528, -0.0200527, 0.757265, 9.85802, 3.49411, -1.36671 )
-shape = SubResource( 8 )
+shape = SubResource( 16 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape11" type="CollisionShape" parent="CaveContainer" index="11"]
+[node name="CollisionShape11" type="CollisionShape" parent="CaveContainer" index="13"]
 
 transform = Transform( 0.721898, -0.0587255, -0.689504, 0.0563328, 0.998073, -0.0260271, 0.689704, -0.0200527, 0.723814, 4.43963, 3.61973, 2.10166 )
-shape = SubResource( 8 )
+shape = SubResource( 16 )
+disabled = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape12" type="CollisionShape" parent="CaveContainer" index="14"]
+
+transform = Transform( 0.637917, -0.0587255, 0.767863, 0.0220682, 0.998073, 0.0579982, -0.769789, -0.0200527, 0.637983, 8.32055, 5.92916, 1.415 )
+shape = SubResource( 16 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
@@ -299,7 +331,7 @@ local_coords = true
 draw_order = 0
 process_material = ExtResource( 5 )
 draw_passes = 1
-draw_pass_1 = SubResource( 9 )
+draw_pass_1 = SubResource( 11 )
 _sections_unfolded = [ "Process Material", "Time", "Transform" ]
 
 [node name="EnemySpawner" parent="." index="6" instance=ExtResource( 7 )]
@@ -312,5 +344,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.76321, 0.847404, -9.51809 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.231953, 0.372001, -5.68273 )
 _sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="SwitchBigArea" parent="." index="9" instance=ExtResource( 9 )]
+
+transform = Transform( -0.52976, 0, 0.848147, 0, 1, 0, -0.848147, 0, -0.52976, -7.28727, 0.604635, 0.67113 )
+NewAreaFilename = "GrassLands"
 
 
