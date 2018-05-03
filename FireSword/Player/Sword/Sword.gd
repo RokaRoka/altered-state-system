@@ -16,6 +16,10 @@ var lastHitParticle
 #state data
 var currentAnimState
 
+#attack data
+var normalDmg = 1
+var fireDmg = 2
+
 var fireActive = false
 onready var fireModule = get_node( "Fire" )
 onready var fireParticles = get_node( "Fire/FireParticles" )
@@ -68,10 +72,6 @@ func lessFire():
 func createHitParticle( parent ):
 	lastHitParticle = hitParticle.instance()
 	parent.add_child( lastHitParticle )
-	#parent.remove( lastHitParticle )
-	#print(String(lastHitParticle.translation))
-	#lastHitParticle.global_transform.origin = parent.global_transform.origin
-	#print(String(lastHitParticle.translation))
 	lastHitParticle.emitting = true
 
 func _on_AnimationPlayer_animation_finished(anim_name):
@@ -83,8 +83,20 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 
 
 func _on_SwordHitbox_body_entered(body):
+	var dmg = normalDmg
+	if fireActive:
+		dmg = fireDmg
+	
 	#print("body is "+body.get_name())
 	if body.get_name() == "Enemy":
-		body.hit(2)
+		body.hit(dmg)
 		createHitParticle(body)
 		print("dmg!")
+	elif body.get_name() == "Burnable_Tree":
+		if fireActive:
+			body.fireHit(dmg)
+			print("burn!")
+		else:
+			body.hit(dmg)
+			print("dmg!")
+		createHitParticle(body)

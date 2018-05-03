@@ -14,4 +14,6 @@ wait_time = 4.0
 one_shot = false
 autostart = true
 
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
+
 

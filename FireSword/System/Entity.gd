@@ -18,7 +18,8 @@ var expPoints = 0
 var velocity = Vector3(0, 0, 0)
 
 func applyGravity():
-	velocity.y += GRAVITY_VALUE
+	if not is_on_floor():
+		velocity.y += GRAVITY_VALUE
 
 func hit( dmgAmount, kbDir = dir.up ):
 	#knockbackDir = kbDir

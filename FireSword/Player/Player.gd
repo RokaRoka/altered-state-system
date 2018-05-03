@@ -39,7 +39,7 @@ func _physics_process(delta):
 	if buffered_attack > 0:
 		playerAttack()
 	
-	playerMovement( delta )		
+	playerMovement( delta )
 	applyGravity()
 	
 	if Input.is_key_pressed( KEY_E ):
@@ -93,7 +93,7 @@ func playerMovement( delta ):
 func playerRotateOnMove():
 	var newVector = Vector3()
 	#print (String( atan2(input_direction.x, input_direction.z)/PI + 0.5) + " Radians")
-	newVector.y = atan2(input_direction.x, input_direction.z) #+ 0.5*PI
+	newVector.y = atan2(input_direction.x, input_direction.z)#+ 0.5*PI
 	rotation = newVector
 	#print(String(angle))
 

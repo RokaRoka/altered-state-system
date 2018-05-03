@@ -6,7 +6,6 @@ var enemyScene = preload( "res://Enemy/Slime/SlimeEnemy.tscn" )
 var lastEnemy
 
 func _ready():
-	get_node( "SpawnTimer" ).connect("timeout", self, "_on_SpawnTimer_timeout")
 	spawn()
 
 func spawn():
@@ -16,6 +15,5 @@ func spawn():
 
 func _on_SpawnTimer_timeout():
 	#print("woaoaaooa tierout")
-	
 	if lastEnemy == null:
 		spawn()

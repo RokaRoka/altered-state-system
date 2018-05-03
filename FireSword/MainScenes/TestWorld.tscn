@@ -121,7 +121,7 @@ extents = Vector3( 2.18474, 2.34012, 0.561612 )
 material = ExtResource( 6 )
 size = Vector2( 1, 1 )
 
-[node name="World" type="Spatial" index="0"]
+[node name="World" type="Spatial"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -215,7 +215,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape7" type="CollisionShape" parent="CaveContainer" index="7"]
 
-transform = Transform( -0.645444, 0, -0.763808, 0, 1, 0, 0.763808, 0, -0.645444, 9.09637, 2.26284, -4.87194 )
+transform = Transform( -0.645444, 0, -0.763808, 0, 1, 0, 0.763808, 0, -0.645444, 8.80137, 2.26284, -4.52285 )
 shape = SubResource( 8 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
@@ -227,8 +227,30 @@ shape = SubResource( 8 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
+[node name="CollisionShape9" type="CollisionShape" parent="CaveContainer" index="9"]
+
+transform = Transform( -0.661128, 0.591617, -0.46141, 0, 0.61499, 0.788536, 0.750273, 0.521323, -0.406587, 6.73319, 1.45212, -0.175777 )
+shape = SubResource( 8 )
+disabled = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape10" type="CollisionShape" parent="CaveContainer" index="10"]
+
+transform = Transform( 0.755341, -0.0587255, -0.652696, 0.0575591, 0.998073, -0.0231893, 0.6528, -0.0200527, 0.757265, 9.85802, 3.49411, -1.36671 )
+shape = SubResource( 8 )
+disabled = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape11" type="CollisionShape" parent="CaveContainer" index="11"]
+
+transform = Transform( 0.721898, -0.0587255, -0.689504, 0.0563328, 0.998073, -0.0260271, 0.689704, -0.0200527, 0.723814, 4.43963, 3.61973, 2.10166 )
+shape = SubResource( 8 )
+disabled = false
+_sections_unfolded = [ "Transform" ]
+
 [node name="Torch" type="OmniLight" parent="." index="5"]
 
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.40647, 5.40248, 2.77504 )
 layers = 1
 light_color = Color( 0.953125, 0.595819, 0.4021, 1 )

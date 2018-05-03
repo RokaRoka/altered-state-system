@@ -50,3 +50,4 @@ func newSkillGet():
 	var skill = levelUpSkills[playerLevel]
 	if playerSkills.has_key(skill):
 		playerSkills[skill] = true
+	pass # replace with function body
